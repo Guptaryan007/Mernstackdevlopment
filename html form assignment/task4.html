@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <center>
+        <h3><b>Registration Form</b></h3>
+        <form>
+            <table border="1" cellspacing="0" cellpadding="6">
+                <tr>
+                    <td>Student Name</td>
+                    <td colspan="3">
+                        <input type="text" name="first_name" placeholder="First Name">
+                        <input type="text" name="middle_name" placeholder="Middle Name">
+                        <input type="text" name="last_name" placeholder="Last Name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Father's Name</td>
+                    <td><input type="text" name="father_name" placeholder="Enter your father's Name" size="30"></td>
+                    <td>Mother's Name</td>
+                    <td><input type="text" name="mother_name" placeholder="Enter your Mother's Name" size="30"></td>
+                </tr>
+
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date" name="dob"></td>
+                    <td>Gender</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Category</td>
+                    <td>
+                        <label><input type="radio" name="category" value="gen"> Gen</label>
+                        <label><input type="radio" name="category" value="obc"> OBC</label>
+                        <label><input type="radio" name="category" value="scst"> SC/ST</label>
+                    </td>
+                    <td>Handicapped</td>
+                    <td>
+                        <label><input type="radio" name="handicapped" value="yes"> Yes</label>
+                        <label><input type="radio" name="handicapped" value="no"> No</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Ex-Serviceman</td>
+                    <td>
+                        <label><input type="radio" name="exserviceman" value="yes"> Yes</label>
+                        <label><input type="radio" name="exserviceman" value="no"> No</label>
+                    </td>
+                    <td>EWS</td>
+                    <td>
+                        <label><input type="radio" name="ews" value="yes"> Yes</label>
+                        <label><input type="radio" name="ews" value="no"> No</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" name="email" size="30"></td>
+                    <td>Mobile No.</td>
+                    <td><input type="tel" name="mobile" size="20"></td>
+                </tr>
+
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <select name="state">
+                            <option value="">Select any One</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Delhi</option>
+                            <option>Maharashtra</option>
+                            <option>Karnataka</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td>City</td>
+                    <td>
+                        <select name="city">
+                            <option value="">Select any One</option>
+                            <option>Lucknow</option>
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+                            <option>Bengaluru</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Upload Photo</td>
+                    <td>
+                        <!-- accepts common image types -->
+                        <input type="file" name="photo" accept="image/*">
+                    </td>
+                    <td>Upload Signature</td>
+                    <td>
+                        <input type="file" name="signature" accept="image/*">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" align="center">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
