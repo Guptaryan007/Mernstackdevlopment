@@ -1,16 +1,29 @@
-*{
-    background-color: #A3F4d2;
+#d1{
+    border: 5px solid black;
+    width: 300px;
+    height: 100px;
+    font-size: 50px;
+     background-color: aqua;
 }
 
-h1{
-    background-color: blueviolet;
+
+#d1 span{
+     background: linear-gradient(90deg,red, greenyellow ,blue);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.5px red;
+
 }
 
+#d2{
+     border: 5px solid red;
+     border-radius: 20px;
+    width: 300px;
+    height: 100px;
+    font-size: 50px;
+    background-color: greenyellow;
+    margin: 20px;
+    padding: 10px 20px 30px 40px;
+    box-shadow: 5px 5px 2px 10px black;
 
-.A{
-    background-color: beige;
-}
-
-#para1{
-    background-color: #06abec;
 }
