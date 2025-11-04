@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Momo+Signature&family=Noto+Sans+TC:wght@100..900&display=swap");
+
+#head2 {
+  background-color: blueviolet;
+}
+
+#head1 {
+  background: linear-gradient(0deg, red 0%, blue 35%, green 50%, yellow 90%);
+}
+
+#para1 {
+  font-family: "Josefin Sans", sans-serif;
+
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#para2 {
+  font-family: "Momo Signature", cursive;
+}
+
+#head3 {
+  color: red;
+  font-size: 50px;
+  text-shadow: 2px 2px 3px rgb(52, 52, 52);
+}
+
+
+
+
+#d1{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    border: 10px double #ee0202;
+    box-shadow: 2px 2px 5px 2px black;
+}
