@@ -1,0 +1,114 @@
+body {
+    background: #407BFF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 32px;
+    box-shadow: 0 8px 24px rgba(64,123,255,0.1);
+    min-width: 340px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.register-form h2 {
+    margin-bottom: 8px;
+    font-size: 2rem;
+    color: #242424;
+}
+
+.underline {
+    u{
+         text-decoration-color:blue ;
+         padding-bottom: 2px;
+    }
+   
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding-bottom: 6px;
+    display: block;
+    border-bottom: 2px solid grey;
+}
+
+.eye{
+    padding-left: 5rem;
+}
+.input .icon {
+    margin-right: 7px;
+    color: #8A8A8A;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    padding: 8px 0;
+    background: transparent;
+    color: #444;
+}
+
+.input .eye-icon {
+    font-size: 1.1rem;
+    margin-left: 5px;
+    color: #8A8A8A;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    font-size: 0.96rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.options input[type="checkbox"] {
+    margin-right: 7px;
+}
+
+.register-button {
+    background: #407BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+}
+
+.register-button:hover {
+    background: #305cb1;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 1rem;
+    color: #444;
+}
+
+.login-link a {
+    color: #407BFF;
+    text-decoration: none;
+}
