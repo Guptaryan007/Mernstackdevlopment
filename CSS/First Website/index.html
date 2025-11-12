@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tailwind Portfolio Page</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav sticky">
+      <div class="container nav-row">
+        <div class="brand">Material Tailwind</div>
+
+        <nav class="menu">
+          <a href="#pages" class="menu-item"> Page</a>
+          <a href="#account" class="menu-item">Account</a>
+          <a href="#docs" class="menu-item">Docs</a>
+        </nav>
+
+        <div class="nav-right">
+          <a href="#signin" class="link">SIGN IN</a>
+          <a href="#blocks" class="btn btn-dark">BLOCKS</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="pages">
+      <div class="container hero-row">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Welcome to my Web<br />Development Portofolio!
+          </h1>
+          <p class="hero-sub">
+            I'm Aryan Gupta, a passionate web developer based in
+            INDIA. Here, you'll get a glimpse of my journey in the world
+            of web development, where creativity meets functionality.
+          </p>
+
+          <label class="label">Your Email</label>
+          <div class="hero-form">
+            <input class="input" type="email" placeholder="Enter your email" />
+            <a class="btn btn-dark" href="#">REQUIRE OFFER</a>
+          </div>
+
+          <p class="tiny">
+            Read my <a href="#" class="link-underline">Terms and Conditions</a>
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img id="hero-img" src="portfolio image.jpg" alt=" Photo" />
+        </div>
+      </div>
+    </section>
+
+    <section class="clients">
+      <div class="container">
+        <p class="eyebrow center">My awesome clients</p>
+        <div class="logo-row imgs">
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-coinbase.svg"
+            alt="Coinbase"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-spotify.svg"
+            alt="Spotify"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-pinterest.svg"
+            alt="Pinterest"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-google.svg"
+            alt="Google"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-amazon.svg"
+            alt="Amazon"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-netflix.svg"
+            alt="Netflix"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-intro">
+      <div class="container">
+        <p class="eyebrow">MY SKILLS</p>
+        <h2 class="section-title center">What I do</h2>
+        <p class="section-sub center">
+          I'm not just a developer; I'm a digital dreamweaver. Crafting
+          immersive online experiences is not just a job but my calling.
+          Discover below how I can help you.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills-grid" id="account">
+      <div class="container grid-3">
+        <div class="skill">
+          <div class="icon-dot">$</i></div>
+          <h3>Frontend Web Development:</h3>
+          <p>
+            Creating beautiful and functional web experiences is my forte. Using
+            the latest technologies and best practices, I design and build
+            websites that captivate and engage users.
+          </p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">⌖⌖</div>
+          <h3>Mobile App Development</h3>
+          <p>
+            I specialize in creating responsive and intuitive mobile apps that
+            work seamlessly across iOS & Android devices. From concept to
+            deployment, I handle every stage of the development process.
+          </p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">▮</div>
+          <h3>Technology Stack</h3>
+          <p>
+            I'm well-versed in HTML5, CSS3, JavaScript, and frameworks like
+            React and React Native.
+          </p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">?</div>
+          <h3>Web Optimization</h3>
+          <p>
+            Performance matters. I optimize websites and apps for speed,
+            ensuring your users enjoy a fast and responsive experience, which
+            boosts satisfaction and SEO.
+          </p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">●</div>
+          <h3>User-Centric Design</h3>
+          <p>
+            My development goes hand-in-hand with an eye for design. I create
+            interfaces that are functional and aesthetically pleasing.
+          </p>
+        </div>
+        <div class="skill">
+          <div class="icon-dot">▣</div>
+          <h3>Testing and Quality Assurance</h3>
+          <p>
+            I rigorously test and debug to guarantee a secure, bug-free
+            environment. Your peace of mind matters as much as functionality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-head" id="docs">
+      <div class="container">
+        <h2 class="section-title center">My Projects</h2>
+        <p class="section-sub center">
+          Whether you have a mobile app idea that needs to come to life or a
+          website that requires a facelift, I'm here to turn your digital dreams
+          into reality.
+        </p>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container grid-4">
+        <article class="card">
+          <div class="thumb">
+            <img src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/image/blog2.svg" alt="" />
+          </div>
+          <h3 class="card-title">Mobile App Development</h3>
+          <p class="card-text">
+            Mobile app designed to help users discover and explore local
+            restaurants and cuisines.
+          </p>
+          <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/image/blog2.svg" alt="" />
+          </div>
+          <h3 class="card-title">Landing Page Development</h3>
+          <p class="card-text">
+            Promotional landing page for a fitness website Summer Campaign. Form
+            development included.
+          </p>
+          <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/image/blog-1.svg" alt="" />
+          </div>
+          <h3 class="card-title">Mobile App Development</h3>
+          <p class="card-text">
+            Mobile app designed to help users discover and explore local
+            restaurants and cuisines.
+          </p>
+          <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/image/blog2.svg" alt="" />
+          </div>
+          <h3 class="card-title">E-commerce development</h3>
+          <p class="card-text">
+            Ecommerce website offering access to the latest and greatest gadgets
+            and accessories.
+          </p>
+          <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/image/blog2.svg" alt="" />
+          </div>
+          <h3 class="card-title">Analytics Dashboard</h3>
+          <p class="card-text">
+            Clean admin dashboard with charts, filters, and export-ready reports
+            for stakeholders.
+          </p>
+          <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/image/blog2.svg" alt="" />
+          </div>
+          <h3 class="card-title">Blog Platform UI</h3>
+          <p class="card-text">
+            Modern blog interface with categories, tags, reading progress, and
+            author profiles.
+          </p>
+          <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/image/blog2.svg" alt="" />
+          </div>
+          <h3 class="card-title">Portfolio Website</h3>
+          <p class="card-text">
+            Personal portfolio with projects grid, testimonials, and contact
+            form styling.
+          </p>
+          <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/image/blog2.svg" alt="" />
+          </div>
+          <h3 class="card-title">SaaS Marketing Site</h3>
+          <p class="card-text">
+            Product marketing site with pricing cards, feature highlights, and
+            CTA sections.
+          </p>
+          <a class="btn btn-dark card-btn" href="#">SEE DETAILS</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="resume">
+      <div class="container resume-row">
+        <div class="resume-left">
+          <h2 class="section-title">My Resume</h2>
+          <p class="section-sub left">
+            Highly skilled and creative Web Developer with 5+ years of
+            experience in crafting visually stunning and functionally robust
+            websites and web applications.
+          </p>
+          <a class="link-strong" href="#">VIEW MORE →</a>
+        </div>
+        <div class="resume-right">
+          <div class="badge">
+            <span class="dot">▮▮▮</span> Bachelor of Science in Computer Science
+          </div>
+          <div class="badge">
+            <span class="dot">▦</span> Certified Web Developer
+          </div>
+          <div class="badge">
+            <span class="dot">✶</span> Frontend Framework Proficiency
+            Certification
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients-say">
+      <div class="container">
+        <h2 class="section-title center">What Clients Say</h2>
+        <p class="section-sub center">
+          Discover what clients have to say about their experiences working with
+          me. My client's satisfaction is my greatest achievement!
+        </p>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="container testi-row">
+        <div class="testi-text">
+          <h3 class="testi-title">Mobile App<br />Development</h3>
+          <p class="testi-body">
+            I had the pleasure of working with Abhishek on a critical web
+            development project, and I can confidently say that their expertise
+            and professionalism exceeded my expectations.
+          </p>
+          <p class="testi-author">
+            <strong>Bill Gates –Founder </strong><br />Owner @ APPLE INC.
+          </p>
+
+          <div class="avatars">
+            <img src="https://th.bing.com/th?id=OIF.wMrUoInBQEonY%2bcUQjN9gg&w=231&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.4&pid=1.7&rm=3" alt="" />
+            <img src="https://th.bing.com/th/id/OIP.mSXXlGXXtwmE4ewaAyeSUgHaFj?w=208&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.4&pid=1.7&rm=3" alt="" />
+            <img src="data:image/webp;base64,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" alt="" />
+          </div>
+        </div>
+        <div class="testi-image">
+        <img src="images (1).jpeg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="clients-cta">
+      <div class="container">
+        <p class="eyebrow center">POPULAR CLIENTS</p>
+        <h2 class="section-title center">
+          Trusted by over 10,000+<br />clients
+        </h2>
+        <div class="logo-row imgs faded">
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-coinbase.svg"
+            alt="Coinbase"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-spotify.svg"
+            alt="Spotify"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-pinterest.svg"
+            alt="Pinterest"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-google.svg"
+            alt="Google"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-amazon.svg"
+            alt="Amazon"
+          />
+          <img
+            class="client-logo"
+            src="https://themewagon.github.io/Next.js-Tailwind-CSS-Portfolio-Template/logos/logo-netflix.svg"
+            alt="Netflix"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container contact-wrap">
+        <div class="contact-left">
+          <h3 class="contact-title">Contact Information</h3>
+          <p class="contact-sub">
+            Fill up the form and our Team will get back to you within 24 hours.
+          </p>
+
+          <ul class="contact-list">
+            <li>📞 +91 8765949245</li>
+            <li>✉ aryangupta291002@gmail.com</li>
+            <li>🎟 Open Support Ticket</li>
+          </ul>
+        </div>
+
+        <form class="contact-form">
+          <div class="row-2">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" placeholder="eg. Lucas" />
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" placeholder="eg. Jones" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="eg. lucas@mail.com" />
+          </div>
+
+          <div class="radio-group">
+            <label class="radio-label">What are you interested on?</label>
+            <div class="radios">
+              <label
+                ><input type="radio" name="interest" checked /> Design</label
+              >
+              <label><input type="radio" name="interest" /> Development</label>
+              <label><input type="radio" name="interest" /> Support</label>
+              <label><input type="radio" name="interest" /> Other</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Your Message</label>
+            <textarea rows="5"></textarea>
+          </div>
+
+          <div class="right">
+            <button class="btn btn-dark" type="button">SEND MESSAGE</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container foot-row">
+        <div class="copy">
+          © 2025 Made by Aryan Gupta. Distributed by
+          Aryan Gupta
+        </div>
+
+        <nav class="foot-menu">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Service</a>
+        </nav>
+
+        <a href="#" class="btn btn-dark">SUBSCRIBE</a>
+      </div>
+    </footer>
+  </body>
+</html>
