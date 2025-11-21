@@ -1,23 +1,60 @@
-function Submit()
-{
-    console.log("Submit Button Clicked");
+function Login() {
+  alert("Redirecting to Student Login Page...");
+  window.location.href = "login.html";
+}
 
-    const nm = document.getElementById("name").value;
-    const nu = document.getElementById("number").value;
-    const em = document.getElementById("email").value;
-    const qa = document.getElementById("Qualification").value;
-    const col = document.getElementById("edu").value;
-    const ye = document.getElementById("year").value;
-    const br = document.getElementById("Branch").value;
+// ---------- SUBMIT BUTTON ----------
+function Submit() {
+  // Get all fields
+  let name = document.getElementById("name").value.trim();
+  let number = document.getElementById("number").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let qualification = document.getElementById("Qualification").value.trim();
+  let college = document.getElementById("edu").value.trim();
+  let year = document.getElementById("year").value;
+  let branch = document.getElementById("Branch").value.trim();
+  let info = document.getElementById("info").value;
+  let executive = document.getElementById("NameOfExecutive").value.trim();
 
-    console.log("Name :" +nm);
-    console.log("Number :" +nu);
-    console.log("Email :" +em);
-    console.log("Qualification :" +qa);
-    console.log("College :" +col);
-    console.log("Year :" +ye);
-    console.log("Branch :" +br);
+  // Checkbox (interests)
+  let interests = [];
+  document.querySelectorAll("input[name='intrest']:checked").forEach((item) => {
+    interests.push(item.nextElementSibling.innerText);
+  });
 
-    //  document.getElementById("name").value="";
-    // document.getElementById("number").value = "";
+  // ---------- VALIDATION ----------
+  if (
+    !name ||
+    !number ||
+    !email ||
+    !qualification ||
+    !college ||
+    year === "year" ||
+    !branch ||
+    !info ||
+    !executive ||
+    interests.length === 0
+  )
+    if (number.length < 10) {
+      alert("⚠ Enter a valid contact number.");
+      return;
+    }
+
+  // ---------- DATA OBJECT ----------
+  let formData = {
+    personName: name,
+    contactNumber: number,
+    email: email,
+    qualification: qualification,
+    collegeSchool: college,
+    studyYear: year,
+    branch: branch,
+    interests: interests,
+    infoSource: info,
+    executiveName: executive,
+  };
+
+  console.log("Form Submitted:", formData);
+
+  alert("🎉 Form Submitted Successfully!");
 }
