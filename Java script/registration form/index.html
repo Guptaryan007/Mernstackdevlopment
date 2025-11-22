@@ -202,11 +202,29 @@
                   />
                   <span>Weekends</span>
                 </div>
+
               </div>
             </div>
           </div>
-        </div>
+          </div>
+       
+       <div class="border border-dark rounded p-3 pt-4 position-relative ">
+                <span class="px-2 fs-5 position-absolute bg-white text-primary" style="top:-15px">Address Details</span>
+                <div class="d-flex align-items-center gap-1">
+                    <label for="fullName" class="form-label w-25">Residental Address: <sup class="text-danger fs-5">*</sup></label>
+                    <textarea name="address" id="address" class="form-control shadow" placeholder="House Number and Street" required></textarea>
+                </div>
 
+                <div class="d-flex align-items-">
+                    <label for="check" class="w-25">City: <sup class="text-danger fs-5">*</sup></label>
+                    <input type="text" name="city" id="city" class="form-control shadow" required>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <label for="check" class="w-25">Pincode: <sup class="text-danger fs-5">*</sup></label>
+                    <input type="number" name="pincode" id="pincode" class="form-control shadow" required>
+                </div>
+            </div>
         <button type="" class="btn btn-success" onclick="submit()">Submit</button>
       </div>
     </main>
