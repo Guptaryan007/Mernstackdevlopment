@@ -23,8 +23,8 @@ const Contact = () => {
         temp.push(value);
         setContactData((previousData) => ({ ...previousData, [name]: temp }));
       } else {
-        temp = Object.values(temp); //Convert to Array
-        temp = temp.filter((word) => word !== value); //Remove the Undersired Value
+        temp = Object.values(temp); 
+        temp = temp.filter((word) => word !== value); 
         setContactData((previousData) => ({ ...previousData, [name]: temp }));
       }
     } else {
