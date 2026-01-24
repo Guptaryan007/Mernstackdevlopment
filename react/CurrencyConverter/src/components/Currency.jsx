@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CountryData from "../assets/CountryData.json"
+import CountryData from "../assets/CountryData.json";
 import toast from "react-hot-toast";
 import axios from "axios";
 
@@ -18,14 +18,14 @@ const Currency = () => {
       const res = await axios.get(
         `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${from
           .split(" ")[0]
-          .toLowerCase()}.json`
+          .toLowerCase()}.json`,
       );
 
       setToAmt(
         fromAmt *
           res.data[from.split(" ")[0].toLowerCase()][
             to.split(" ")[0].toLowerCase()
-          ]
+          ],
       );
     } catch (error) {}
   };
