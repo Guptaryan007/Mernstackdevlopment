@@ -68,11 +68,10 @@ export const UserLogin = async (req, res, next) => {
     }
 
     //Token Generation will be done here
-    await genToken(existingUser,res);
-
+    await genToken(existingUser, res);
 
     //send message to Frontend
-    res.status(200).json({message: 'Login Successfull',data:existingUser});
+    res.status(200).json({ message: "Login Successfull", data: existingUser });
     //end
   } catch (error) {
     next(error);
@@ -80,7 +79,8 @@ export const UserLogin = async (req, res, next) => {
 };
 export const UserLogout = async (req, res, next) => {
   try {
-     res.status(200).json({message: 'Logout Successfull'});
+    res.clearCookie("parleG");
+    res.status(200).json({ message: "Logout Successfull" });
   } catch (error) {
     next(error);
   }
