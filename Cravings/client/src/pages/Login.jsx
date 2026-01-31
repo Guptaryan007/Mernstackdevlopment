@@ -9,6 +9,10 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const [isForgetPasswordModalOpen,setIsForgetPasswordModalOpen] = {
+
+  }
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -119,6 +123,8 @@ const Login = () => {
                   />
                 </div>
               </div>
+              <div className="">Forget Password</div>
+
 
               {/* Submit Button */}
               <div className="flex gap-4 pt-8 border-t-2 border-gray-200">
@@ -149,5 +155,9 @@ const Login = () => {
     </>
   );
 };
+
+{
+  isForgetPasswordModalOpen && (<></>)
+}
 
 export default Login;
