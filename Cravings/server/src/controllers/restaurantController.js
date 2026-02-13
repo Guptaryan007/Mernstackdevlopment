@@ -1,8 +1,140 @@
-import cloudinary from "../config/cloudinary.js";
-import User from "../models/userModel.js";
-import bcrypt from "bcrypt";
+import Menu from "../models/menuSchema.js";
+import { UploadMultipleToCloudinary } from "../utils/imageUploader.js";
 
-export const UserUpdate = async (req, res, next) => {
+export const RestaurantAddMenuItem = async (req, res, next) => {
+  try {
+    const {
+      itemName,
+      description,
+      price,
+      type,
+      preparationTime,
+      availability,
+      servingSize,
+      cuisine,
+    } = req.body;
+
+    const CurrentUser = req.user;
+
+    if (
+      !itemName ||
+      !description ||
+      !price ||
+      !type ||
+      !preparationTime ||
+      !availability ||
+      !servingSize ||
+      !cuisine
+    ) {
+      const error = new Error("All Fields are Required");
+      error.statusCode = 400;
+      return next(error);
+    }
+
+    const images = await UploadMultipleToCloudinary(req.files);
+    console.log(images);
+
+    const newMenuItem = await Menu.create({
+      itemName,
+      description,
+      price,
+      type,
+      preparationTime,
+      availability,
+      servingSize,
+      cuisine,
+      images,
+      restaurantID: CurrentUser._id,
+    });
+
+    res.status(201).json({
+      message: "Menu Item Added Successfully",
+      data: newMenuItem,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+export const RestaurantEditMenuItem = async (req, res, next) => {
+  try {
+    const {
+      itemName,
+      description,
+      price,
+      type,
+      preparationTime,
+      availability,
+      servingSize,
+      cuisine,
+    } = req.body;
+
+    const { id } = req.params;
+
+    const CurrentUser = req.user;
+
+    if (
+      !itemName ||
+      !description ||
+      !price ||
+      !type ||
+      !preparationTime ||
+      !availability ||
+      !servingSize ||
+      !cuisine
+    ) {
+      const error = new Error("All Fields are Required");
+      error.statusCode = 400;
+      return next(error);
+    }
+
+    let images = [];
+    if (req.files) {
+      images = await UploadMultipleToCloudinary(req.files);
+      console.log(images);
+    }
+
+    const existingMenuItem = await Menu.findById(id);
+
+    existingMenuItem.itemName = itemName || existingMenuItem.itemName;
+    existingMenuItem.description = description || existingMenuItem.description;
+    existingMenuItem.price = price || existingMenuItem.price;
+    existingMenuItem.type = type || existingMenuItem.type;
+    existingMenuItem.preparationTime =
+      preparationTime || existingMenuItem.preparationTime;
+    existingMenuItem.availability =
+      availability || existingMenuItem.availability;
+    existingMenuItem.servingSize = servingSize || existingMenuItem.servingSize;
+    existingMenuItem.cuisine = cuisine || existingMenuItem.cuisine;
+    existingMenuItem.images =
+      images.length > 0 ? images : existingMenuItem.images;
+    await existingMenuItem.save();
+
+    res.status(201).json({
+      message: "Menu Item Updated Successfully",
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const GetRestaurantMenuItem = async (req, res, next) => {
+  try {
+    const CurrentUser = req.user;
+
+    const menuItems = await Menu.find({ restaurantID: CurrentUser._id });
+
+    res.status(200).json({
+      message: "Menu Items Fetched Successfully",
+      data: menuItems,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+
+
+export const RestaurantUpdate = async (req, res, next) => {
   try {
     const {
       fullName,
@@ -13,6 +145,8 @@ export const UserUpdate = async (req, res, next) => {
       address,
       city,
       pin,
+      restaurantName,
+      cuisine,
       documents,
       paymentDetails,
       geoLocation,
@@ -28,6 +162,12 @@ export const UserUpdate = async (req, res, next) => {
 
     if (!city || !pin) {
       const error = new Error("City and PIN Code are required");
+      error.statusCode = 400;
+      return next(error);
+    }
+
+    if (!restaurantName) {
+      const error = new Error("Restaurant Name is required");
       error.statusCode = 400;
       return next(error);
     }
@@ -85,6 +225,10 @@ export const UserUpdate = async (req, res, next) => {
     currentUser.city = city;
     currentUser.pin = pin;
 
+    // Update restaurant information
+    currentUser.restaurantName = restaurantName;
+    currentUser.cuisine = cuisine || currentUser.cuisine;
+
     // Update nested documents
     if (documents) {
       currentUser.documents = {
@@ -126,13 +270,13 @@ export const UserUpdate = async (req, res, next) => {
 
     res
       .status(200)
-      .json({ message: "User Updated Successfully", data: currentUser });
+      .json({ message: "Restaurant Updated Successfully", data: currentUser });
   } catch (error) {
     next(error);
   }
 };
 
-export const UserChangePhoto = async (req, res, next) => {
+export const RestaurantChangePhoto = async (req, res, next) => {
   try {
     // console.log("body: ", req.body);
     const currentUser = req.user;
@@ -176,13 +320,13 @@ export const UserChangePhoto = async (req, res, next) => {
   }
 };
 
-export const UserResetPassword = async (req, res, next) => {
+export const RestaurantResetPassword = async (req, res, next) => {
   try {
     const { oldPassword, newPassword } = req.body;
     const currentUser = req.user;
 
     if (!oldPassword || !newPassword) {
-      const error = new Error("All fields required");
+      const error = new Error("All feilds required");
       error.statusCode = 400;
       return next(error);
     }
